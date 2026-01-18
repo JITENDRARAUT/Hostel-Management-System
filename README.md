@@ -15,3 +15,12 @@ This project aims to reduce manual work, improve data accuracy, and provide an e
 
 ---
 
+## 🎯 Objectives
+- To automate hostel management tasks  
+- To manage student, room, warden, and payment records efficiently  
+- To provide a secure admin login system  
+- To store and retrieve data using a database  
+- To improve accuracy and reduce paperwork  
+
+---
+
