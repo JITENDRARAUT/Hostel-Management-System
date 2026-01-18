@@ -5,3 +5,13 @@ It helps administrators handle student records, room allocation, warden details,
 
 This project aims to reduce manual work, improve data accuracy, and provide an easy-to-use interface for hostel management.
 
+---
+
+## 👥 Team Members
+- **Asha Giri**
+- **Komal Basnet**
+- **Gagan Prasai**
+- **Jitendra Narayan Raut**
+
+---
+
