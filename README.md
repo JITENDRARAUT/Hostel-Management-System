@@ -36,3 +36,12 @@ This project aims to reduce manual work, improve data accuracy, and provide an e
 
 ---
 
+## 🛠️ Technologies Used
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** PHP  
+- **Database:** MySQL  
+- **Server:** Apache (XAMPP / WAMP)  
+
+---
+
+
