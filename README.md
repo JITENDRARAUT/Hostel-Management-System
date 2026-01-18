@@ -24,3 +24,15 @@ This project aims to reduce manual work, improve data accuracy, and provide an e
 
 ---
 
+## ⚙️ Features
+- Admin Login & Logout System  
+- Student Management (Add, Update, Delete, View)  
+- Room Management  
+- Warden Management  
+- Payment Management  
+- Dashboard with hostel statistics  
+- Database connectivity  
+- User-friendly interface  
+
+---
+
