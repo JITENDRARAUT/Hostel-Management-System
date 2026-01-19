@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ambition Hostel Admin Login</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Orbitron', sans-serif; }
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-container {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 400px;
+      color: #fff;
+      text-align: center;
+    }
+    h1 { color: #00feba; margin-bottom: 10px; }
+    h3 { color: #aaa; margin-bottom: 30px; }
+    label { display: block; text-align: left; margin-bottom: 5px; font-size: 14px; }
+    input {
+      width: 100%; padding: 10px; margin-bottom: 20px;
+      background: rgba(255,255,255,0.2); border: none;
+      color: #fff; border-radius: 6px;
+    }
+    button {
+      width: 100%; padding: 12px; background: linear-gradient(135deg, #00feba, #5b86e5);
+      border: none; border-radius: 6px; color: #000; font-weight: bold;
+      cursor: pointer; transition: 0.3s;
+    }
+    button:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Ambition Hostel</h1>
+    
+    <form action="admin_login.php" method="POST">
+  <h2>Admin Login</h2>
+  <label>Email:</label>
+  <input type="email" name="email" required />
+  <label>Password:</label>
+  <input type="password" name="password" required />
+  <button type="submit">Login</button>
+</form>
+  </div>
+
+  <script>
+    function goToDashboard() {
+      window.location.href = "admin_dashboard.html";
+      return false;
+    }
+  </script>
+</body>
+</html>
+  
