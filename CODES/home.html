@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hostel Management System</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f7fc;
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #004080;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 55px;
+      width: 55px;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* CONTACT BAR */
+    .contact-bar {
+      background-color: #0059b3;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 15px 20px;
+    }
+
+    .contact-section {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .contact-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: transform 0.2s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    /* NAVIGATION */
+    nav {
+      background-color: #007acc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* DROPDOWN */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background: none;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #007acc;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #005fa3;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block; /* for desktop hover */
+    }
+
+    /* HERO IMAGE */
+    .hero-img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .logo-text {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+      <div class="logo-text">Hostel Management System</div>
+    </div>
+  </header>
+
+  <div class="contact-bar">
+    <div class="contact-section">
+      <div class="contact-group">
+        <strong>📞 Phone</strong>
+        +977-98XXXXXXXX
+        <strong>✉️ Email</strong>
+        info@ambitionhostel.com
+      </div>
+      <div class="contact-group">
+        <strong>📍 Address</strong>
+        Balkumari, Lalitpur
+      </div>
+      <div class="contact-group">
+        <strong>🕒 Open Hours</strong>
+        5 AM – 9 PM
+      </div>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com/"><i class="fab fa-facebook-f" title="Facebook"></i></a>
+      <a href="www.twitter.com"><i class="fab fa-twitter" title="Twitter"></i></a>
+      <a href="#"><i class="fab fa-whatsapp" title="WhatsApp"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in" title="LinkedIn"></i></a>
+      <a href="#"><i class="fab fa-instagram" title="Instagram"></i></a>
+    </div>
+  </div>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="abouthostel.html">About Hostel</a>
+    <a href="registration.html">Register</a>
+
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">Login ▾</button>
+      <div class="dropdown-content" id="loginDropdown">
+        <a href="adminlogin.html">Admin Login</a>
+        <a href="wardenlogin.html">Warden Login</a>
+
+        <a href="studentlogin.html">Student Login</a>
+      </div>
+    </div>
+    <a href="contactus.html">Contact Us</a>
+  </nav>
+
+  <img class="hero-img" src="home.jpg" alt="Hostel View" />
+
+  <footer>
+    &copy; 2025 Ambition Hostel. All rights reserved. | ambitionhostel123@gmail.com
+  </footer>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("loginDropdown");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          dropdowns[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
