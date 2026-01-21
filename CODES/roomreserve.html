@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e0f0ff;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .payment-box {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: #004080;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      background: #004080;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #002d5e;
+    }
+  </style>
+</head>
+<body>
+<form action="room_booking.php" method="POST">
+  <h2>Room Reservation</h2>
+  <label>Room Number:</label>
+  <input type="text" name="room_number" required />
+
+  <label>Booking Date:</label>
+  <input type="date" name="booking_date" required />
+
+  <button type="submit">Book Room</button>
+</form>
+
+
+</body>
+</html>
