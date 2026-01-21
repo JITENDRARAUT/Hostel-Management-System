@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registration Form</title>
+  <style>
+    body {
+      background-color: lightgrey;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: blue;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .R {
+      text-align: center;
+      text-decoration: underline;
+      margin: 20px 0;
+    }
+    form {
+      width: 80%;
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 15px;
+    }
+    input,
+    select,
+    textarea {
+      margin: 5px 0 10px;
+      padding: 8px;
+      width: 95%;
+      box-sizing: border-box;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+    }
+    button {
+      margin-right: 10px;
+      padding: 10px 15px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button[type="reset"] {
+      background-color: grey;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: absolute;
+      top: 15px;  
+      left: 15px;
+      font-size: 16px;
+
+    }
+  </style>
+</head>
+<body>
+    <header><a href="home.html">Back</a></header>
+
+  <header>
+    <h1>Hostel Management System</h1>
+    <p>Welcome to Ambition Hostel</p>
+  </header>
+
+  <h3 class="R">Registration Form</h3>
+
+  <form id="registrationForm" action="register_student.php" method="POST" enctype="multipart/form-data" novalidate>
+    <fieldset>
+      <label for="firstname">First Name:</label>
+      <input type="text" name="firstname" id="firstname" required pattern="[A-Za-z]{2,30}" title="Only letters, 2-30 characters" />
+
+      <label for="lastname">Last Name:</label>
+      <input type="text" name="lastname" id="lastname" required pattern="[A-Za-z]{2,30}" title="Only letters, 2-30 characters"/>
+
+      <label for="age">Age:</label>
+      <input type="number" name="age" id="age" required min="1" max="99" title="Age must be between 1 and 99"/>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email address"/>
+
+      <label for="country_code">Phone Country Code:</label>
+      <select name="country_code" id="country_code" required>
+        <option value="+977">+977</option>
+        <option value="+978">+978</option>
+      </select>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" name="phone" id="phone" required pattern="^[0-9]{10}$" title="Phone number must be 10 digits"/>
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required pattern="^[a-zA-Z0-9 ,]+$" title="Only letters, numbers, spaces, and commas allowed" />
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" id="male" value="Male" required />
+      <label for="male" style="display:inline">Male</label>
+      <input type="radio" name="gender" id="female" value="Female" />
+      <label for="female" style="display:inline">Female</label>
+      <input type="radio" name="gender" id="other" value="Other" />
+      <label for="other" style="display:inline">Other</label>
+    </fieldset>
+
+    <fieldset>
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" required pattern="^[a-zA-Z0-9_]{4,16}$" title="4-16 characters, letters, numbers, and underscores only" />
+<label for="Password">Password:</label>
+      <input type="password" name="password" id="password" required pattern="^[a-zA-Z].*[0-9]$" title="Password must start with a letter and end with a number"/>
+
+      <label for="confirm_password">Confirm Password:</label>
+      <input type="password" id="confirm_password" name="confirm_password" required />
+    </fieldset>
+
+    <fieldset>
+      <h2>Hobbies:</h2>
+      <input type="checkbox" name="hobby[]" value="Cricket" />Cricket
+      <input type="checkbox" name="hobby[]" value="Music" />Music
+      <input type="checkbox" name="hobby[]" value="Football" />Football
+    </fieldset>
+    <br>
+
+    <label for="college">College:</label>
+    <input type="text" name="college" id="college" placeholder="Enter your college name" />
+
+    <label for="occupation">Occupation:</label>
+    <input type="text" name="occupation" id="occupation" placeholder="Enter your occupation" required/>
+
+    <label for="photo">Photo:</label>
+    <input type="file" name="photo" id="photo" />
+
+    <label for="document">Document:</label>
+    <input type="file" name="document" id="document" />
+
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" placeholder="Write your message here." rows="4"></textarea>
+
+    <br /><br />
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("registrationForm");
+
+    form.addEventListener("submit", function (e) {
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        form.reportValidity();
+        return;
+      }
+
+      const password = document.getElementById("password").value;
+const confirmPassword = document.getElementById("confirm_password").value;
+if (password !== confirmPassword) {
+  e.preventDefault();
+  alert("Passwords do not match!");
+  document.getElementById("confirm_password").focus();
+  return;
+}
+
+      const age = parseInt(document.getElementById("age").value, 10);
+      if (isNaN(age) || age < 1 || age > 99) {
+        e.preventDefault();
+        alert("Please enter a valid age between 1 and 99.");
+        document.getElementById("age").focus();
+        return;
+      }
+    });
+  </script>
+</body>
+</html>
