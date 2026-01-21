@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hostel Room Information</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f2f5f9;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 40px;
+    }
+
+    .room-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      max-width: 800px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .room-image {
+      flex: 1 1 300px;
+      min-height: 250px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .room-info {
+      flex: 1 1 400px;
+      padding: 20px;
+    }
+
+    .room-info h2 {
+      margin-top: 0;
+      color: #003366;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+    }
+
+    .info-item img {
+      width: 28px;
+      margin-right: 12px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-right: 6px;
+      color: #333;
+    }
+
+    @media (max-width: 700px) {
+      .room-card {
+        flex-direction: column;
+      }
+    }
+    .a{
+      margin-top: 150px;
+      margin-right: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hostel Room Information</h1>
+
+  <div class="room-card">
+    <div class="room-image" style="background-image: url('https://www.shutterstock.com/image-photo/hostel-dormitory-beds-arranged-room-260nw-696168130.jpg');">
+    </div>
+    <div class="room-info">
+      <h2>Room #101 (ID: R001)</h2>
+
+      <div class="info-item">
+        <img src="https://risingstarhostel.com/wp-content/uploads/2024/03/PRB_5855-scaled.jpg" alt="Single Bed Icon">
+        <span><span class="label">Single Bed:</span> Available</span>
+      </div>
+
+      <div class="info-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa4zolgZSlrBMZfiL3Q4Be1TdG4GyrOTCuSg&s" alt="Double Bed Icon">
+        <span><span class="label">Double Bed:</span> Not Available</span>
+      </div>
+
+      <div class="info-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/2933/2933927.png" alt="AC Icon">
+        <span><span class="label">Air Conditioning:</span> Yes (AC Room)</span>
+      </div>
+    </div>
+    <div class="a">
+       <a href="booking.html">Booking</a>
+    </div>
+  </div>
+
+  <div class="room-card">
+    <div class="room-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa4zolgZSlrBMZfiL3Q4Be1TdG4GyrOTCuSg&s');">
+    </div>
+    <div class="room-info">
+      <h2>Room #102 (ID: R002)</h2>
+
+      <div class="info-item">
+        <img src="https://risingstarhostel.com/wp-content/uploads/2024/03/PRB_5855-scaled.jpg" alt="Single Bed Icon">
+        <span><span class="label">Single Bed:</span> Not Available</span>
+      </div>
+
+      <div class="info-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa4zolgZSlrBMZfiL3Q4Be1TdG4GyrOTCuSg&s" alt="Double Bed Icon">
+        <span><span class="label">Double Bed:</span> Available</span>
+      </div>
+
+      <div class="info-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/2933/2933927.png" alt="AC Icon">
+        <span><span class="label">Air Conditioning:</span> No (Non-AC Room)</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
