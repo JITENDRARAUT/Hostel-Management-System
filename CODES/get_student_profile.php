@@ -1,5 +1,4 @@
 <?php
-<?php
 session_start();
 include 'db.php';
 
@@ -28,4 +27,5 @@ echo json_encode([
     'room_number' => $room_number,
     'photo' => $photo
 ]);
+
 ?>
