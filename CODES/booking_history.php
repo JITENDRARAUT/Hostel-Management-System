@@ -14,7 +14,7 @@ if (!$result) {
     die("Query failed: " . $conn->error);
 }
 ?>
-c
+
 <!DOCTYPE html>
 <html>
 <head>
