@@ -4,4 +4,4 @@ session_destroy();
 header("Location: adminlogin.html");
 exit();
 ?>
-v
+
