@@ -27,5 +27,5 @@ echo json_encode([
     'room_number' => $room_number,
     'photo' => $photo
 ]);
-c
+
 ?>
