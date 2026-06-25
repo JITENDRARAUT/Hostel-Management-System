@@ -11,7 +11,7 @@ $students = $conn->query("SELECT * FROM students");
 
 $bookings = $conn->query("SELECT b.id, s.name, b.room_number, b.booking_date 
                           FROM bookings b JOIN students s ON b.student_id = s.id");
-?>v
+?>
 
 <!DOCTYPE html>
 <html>
