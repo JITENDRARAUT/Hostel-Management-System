@@ -16,5 +16,5 @@ header("Location: admindashboard.php");
     } else {
         echo "<script>alert('Invalid credentials'); window.location.href='adminlogin.html';</script>";
     }
-}
+}v
 ?>
